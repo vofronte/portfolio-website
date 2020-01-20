@@ -1,6 +1,6 @@
 section.works
-    .container.work__container
-        h2.title Мои работы
+    .container.works__container
+        h2.title.title-works Мои работы
         .slider
             .slider__display
                 +image('content/work-1.jpg', 'slider__display-pic')
@@ -23,10 +23,11 @@ section.works
 
             .slider__info
                 .slider__tags
-                    ul.tags
-                        li.tags__item HTML
-                        li.tags__item CSS
-                        li.tags__item Javascript
+                    .tags-wrap
+                        ul.tags
+                            li.tags__item HTML
+                            li.tags__item CSS
+                            li.tags__item Javascript
                 .slider__info-text
                     h3.slider__info-title Сайт школы образования
                     .slider__info-desc
