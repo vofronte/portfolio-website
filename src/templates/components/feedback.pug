@@ -1,0 +1,27 @@
+section.feedback
+    .container.feedback__container
+        h2.title.feedback__title Связаться со мной
+        form.feedback-form
+            .feedback-form__row
+                .feedback-form__col
+                    label.input
+                        .input__text Введите ваше имя
+                        .input__data
+                            .input__icon
+                            input.input__elem(type="text")
+                            .input__error
+                .feedback-form__col
+                    label.input
+                        .input__text Введите ваш email
+                        .input__data
+                            .input__icon
+                            input.input__elem(type="email")
+                            .input__error
+            .feedback-form__row
+                label.textarea
+                    .textarea__text Сообщение к письму
+                    .textarea__data
+                        .textarea__icon
+                        textarea.textarea__elem
+                        .textarea__error
+            button.btn(type="submit") Отправить

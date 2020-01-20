@@ -1,0 +1,26 @@
+.feedback-parallax {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+    height: 100%;
+    width: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        height: 100%;
+        opacity: 0.9;
+        background-image: linear-gradient(to right, #232529 0%, #232528 42%, rgba(34, 36, 39, 0) 100%);
+    }
+}
+
+.feedback-parallax__img {
+    object-fit: cover;
+    object-position: center bottom;
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,7 @@
+.socials
+    - var socials = ['insta', 'vk', 'github'];
+        ul.socials__list
+            each item in socials
+                li.social__item
+                    a.social__link(href='#')
+                        +icon(item, 'social__icon')

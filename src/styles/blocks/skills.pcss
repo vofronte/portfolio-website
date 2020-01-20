@@ -1,0 +1,42 @@
+.skills {
+    &__circle {
+        stroke-dasharray: 351;
+    
+        &--under {
+            stroke: #eaeaea;
+            stroke-width: 3px;
+        }
+    
+        &--above {
+            stroke-width: 9px;
+        }
+    }
+
+}
+
+.skills__list {
+    display: flex;
+}
+
+.skills__icon {
+    width: 135px;
+    height: 135px;
+    fill: none;
+}
+
+.skills__item {
+    list-style: none;
+    position: relative;
+}
+
+.skills__tech {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.skills__wrapper {
+    margin: 0 5%;
+}

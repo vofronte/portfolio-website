@@ -1,0 +1,10 @@
+{
+  "main-color": "#ffffff",
+  "links-color": "#586ed3",
+  "gray-color": "#333c49",
+
+  "bp-desktop-hd": "1800px",
+  "bp-desktop": "1200px",
+  "bp-tablets": "768px",
+  "bp-phones": "480px"
+}
