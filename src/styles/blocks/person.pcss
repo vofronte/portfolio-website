@@ -3,6 +3,13 @@
     justify-content: center;
 }
 
+.person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .person__name {
     width: 411px;
     font-size: 72px;
@@ -29,4 +36,16 @@
 .person-info__avatar {
     width: 200px;
     height: 200px;
+    margin-bottom: 80px;
+}
+
+.person-info__data-row {
+    :first-child {
+        opacity: 0.15;
+        color: $main-color;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.88;
+        padding-right: 80px;
+    }
 }

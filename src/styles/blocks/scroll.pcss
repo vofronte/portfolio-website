@@ -1,6 +1,29 @@
 .scroll {
-    
     &:hover {
-        color: $orange-color;
+        .scroll__btn {
+            color: $orange-color;
+        }
+
+        .scroll__icon {
+            fill: $orange-color;
+        }
     }
+}
+
+.scroll__btn {
+    display: flex;
+    align-items: center;
+    color: $main-color;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.67;
+    transition: color $speed;
+
+}
+
+.scroll__icon {
+    width: 30px;
+    height: 30px;
+    fill: $main-color;
+    transition: fill $speed;
 }
