@@ -3,8 +3,8 @@
   "links-color": "#586ed3",
   "gray-color": "#333c49",
   "orange-color": "#ff9a00",
+  "red-color": "#db0200",
   "speed": "0.3s",
-
 
   "bp-desktop-hd": "1800px",
   "bp-desktop": "1200px",

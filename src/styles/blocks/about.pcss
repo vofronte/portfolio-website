@@ -1,19 +1,61 @@
 .about {
     margin: 0 auto;
     padding: 200px 0;
-    max-width: 1000px;
-
+    position: relative;
 }
+
 
 .about__container {
     display: flex;
+    justify-content: center;
 }
 
 .about__left {
-    width: 40%;
+    width: 22%;
     margin-right: 10%;
 }
 
 .about__right {
-    width: 60%;
+    width: 36%;
+    color: $main-color;
+    font-weight: 600;
+    line-height: 1.88;
+    font-size: 16px;
+}
+
+.about__welcome-text {
+    opacity: 0.5;
+}
+
+.about__person-name {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.33;
+    opacity: initial;
+    margin-top: 30px;
+}
+
+.about__desc {
+    margin-top: 38px;
+    opacity: 0.5;
+}
+
+.about__extra-desc {
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 105px;
+    opacity: 0.5;
+    position: relative;
+
+    &::after {
+        content: '*';
+        position: absolute;
+        font-size: 48px;
+        color: $red-color;
+        opacity: 0.1;
+        font-weight: 400;
+        font-style: italic;
+        left: -47px;
+        top: -18px;
+    }
 }
