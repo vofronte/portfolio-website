@@ -11,7 +11,7 @@
 }
 
 .about__left {
-    width: 22%;
+    width: 25%;
     margin-right: 10%;
 }
 
@@ -57,5 +57,31 @@
         font-style: italic;
         left: -47px;
         top: -18px;
+    }
+}
+
+.about__person-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about__person-info__avatar {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 80px;
+}
+
+.about__person-info__data-row {
+    font-weight: 600;
+
+    :first-child {
+        opacity: 0.15;
+        color: $main-color;
+        font-size: 16px;
+        line-height: 1.88;
+        padding-right: 80px;
     }
 }

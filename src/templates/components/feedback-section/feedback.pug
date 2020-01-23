@@ -8,20 +8,23 @@ section.feedback
                         .input__text Введите ваше имя
                         .input__data
                             .input__icon
-                            input.input__elem(type="text")
+                                +icon('user', 'user-icon')
+                            input.input__elem(type="text" placeholder="Ковальчук Дмитрий")
                             .input__error
                 .feedback-form__col
                     label.input
                         .input__text Введите ваш email
                         .input__data
                             .input__icon
-                            input.input__elem(type="email")
+                                +icon('envelope', 'envelope-icon')
+                            input.input__elem(type="email" placeholder="loftschool@study.com")
                             .input__error
             .feedback-form__row
                 label.textarea
                     .textarea__text Сообщение к письму
                     .textarea__data
                         .textarea__icon
-                        textarea.textarea__elem
+                            +icon('message', 'message-icon')
+                        textarea.textarea__elem(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
                         .textarea__error
             button.btn(type="submit") Отправить

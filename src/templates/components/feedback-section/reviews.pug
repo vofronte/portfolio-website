@@ -3,44 +3,51 @@ section.reviews
         .reviews__header
             h2.title.reviews__title Что обо мне говорят
             .reviews__controls
-                .arrows-btns
-                    a.arrow-btn.arrow-btn--next 
-                    a.arrow-btn.arrow-btn--prev
+                .reviews__arrows-btns
+                    a.reviews__arrow-btn.reviews__arrow-btn--next
+                        +icon('arrow-down', 'arrow-icon-prev')
+                    a.reviews__arrow-btn.reviews__arrow-btn--prev
+                        +icon('arrow-down', 'arrow-icon-next')
         .reviews-blocks
             ul.reviews__list
+            
                 li.reviews__item
-                    .reviews__text
-                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-                        | 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__user
-                        .reviews
-                            .reviews__avatar
-                                .avatar
-                                    +image('content/user.jpg', 'avatar__img', 'Сергеев Владимир')
-                            .reviews__user-info
-                                .reviews__username Ковальчук Дмитрий
-                                .reviews__position Основатель Loftschool
+                    .reviews__item-wrap
+                        .reviews__text
+                            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+                            | 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .reviews__user
+                            .reviews
+                                .reviews__avatar
+                                    .avatar
+                                        +image('content/kovalchuk-dmitriy.png', 'avatar__img', 'Ковальчук Дмитрий')
+                                .reviews__user-info
+                                    .reviews__username Ковальчук Дмитрий
+                                    .reviews__position Основатель Loftschool
+
                 li.reviews__item
-                    .reviews__text
-                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-                        | 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__user
-                        .reviews
-                            .reviews__avatar
-                                .avatar
-                                    +image('content/user.jpg', 'avatar__img', 'Сергеев Владимир')
-                            .reviews__user-info
-                                .reviews__username Ковальчук Дмитрий
-                                .reviews__position Основатель Loftschool
+                    .reviews__item-wrap
+                        .reviews__text
+                            | Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах
+                        .reviews__user
+                            .reviews
+                                .reviews__avatar
+                                    .avatar
+                                        +image('content/vladimir-sabancev.png', 'avatar__img', 'Владимир Сабанцев')
+                                .reviews__user-info
+                                    .reviews__username Владимир Сабанцев
+                                    .reviews__position Преподаватель
+
                 li.reviews__item
-                    .reviews__text
-                        | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
-                        | 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
-                    .reviews__user
-                        .reviews
-                            .reviews__avatar
-                                .avatar
-                                    +image('content/user.jpg', 'avatar__img', 'Сергеев Владимир')
-                            .reviews__user-info
-                                .reviews__username Ковальчук Дмитрий
-                                .reviews__position Основатель Loftschool
+                    .reviews__item-wrap
+                        .reviews__text
+                            | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool!
+                            | 4,5 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .reviews__user
+                            .reviews
+                                .reviews__avatar
+                                    .avatar
+                                        +image('content/user.jpg', 'avatar__img', 'Сергеев Владимир')
+                                .reviews__user-info
+                                    .reviews__username Ковальчук Дмитрий
+                                    .reviews__position Основатель Loftschool

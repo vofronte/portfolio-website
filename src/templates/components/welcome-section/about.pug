@@ -1,11 +1,11 @@
 section.about
     .container.about__container
         .about__left
-            .person-info
-                .person-info__avatar
+            .about__person-info
+                .about__person-info__avatar
                     .avatar
                         +image('content/user.jpg', 'avatar__img', 'Сергеев Владимир')
-                .person-info__text
+                .about__person-info__text
                     -
                         var rowsPersonInfo = [
                             ['Проживаю:', 'Новосибирск'],
@@ -13,10 +13,10 @@ section.about
                             ['Родился:', '3 ноября 1994']
                         ]
 
-                    table.person-info__data
-                        table.person-info__data-table
+                    table.about__person-info__data
+                        table.about__person-info__data-table
                             each row in rowsPersonInfo
-                                tr.person-info__data-row
+                                tr.about__person-info__data-row
                                     each cell in row
                                         td #{cell}
         .about__right
