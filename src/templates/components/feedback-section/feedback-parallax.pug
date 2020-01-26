@@ -1,2 +1,4 @@
 .feedback-parallax
-    +image('parallax/feedback_autumn.jpg', 'feedback-parallax__img')
+        each idx in [1, 2, 3, 4]
+            .feedback-parallax__layer(data-speed='4')
+                +image(`parallax/leaf-${idx}.png`, 'feedback-parallax__img')

@@ -1,0 +1,44 @@
+
+.skills-section {
+    background-image: url('~images/content/bg-value.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -9%;
+        background-image: url('~images/content/bg-value-hands.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 682px;
+        height: 983px;
+    }
+}
+
+.skills-section__container {
+    padding: 150px 0 150px 25%;
+}
+
+.skills-section__info {
+    max-width: 587px;
+}
+
+.skills-section__info-title {
+    color: $main-color;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.skills-section__info-subtitle {
+    opacity: 0.5;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.88;
+    margin-top: 55px;
+}

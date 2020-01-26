@@ -1,0 +1,57 @@
+script(type='text/x-template')#slider-container
+    .slider
+        display(
+            :works='works'
+            :currentWork='currentWork'
+            :currentIndex='currentIndex'
+            @slide='handleSlide'
+        )
+        info(
+            :currentWork='currentWork'
+        )
+
+script(type='text/x-template')#slider-display
+    .slider__display(:data-slide='currentIndex + 1')
+        .slider__display-conten
+            .slider__display-fullpic
+                img(:src="currentWork.photo", alt='', class='slider__full-pic')
+            thumbs(
+                :works='works'
+                :currentWork='currentWork'
+            )
+            btns(
+                @slide='$emit("slide", $event)'
+            )
+
+script(type='text/x-template')#slider-thumbs
+    ul.slider__display-thumbs
+            li.slider__display-thumbs-item(
+                v-for='work in works'
+                :class='{active: work.id === currentWork.id}'
+                )
+                a.slider__display-thumbs-link
+                    img(:src="work.photo", alt='', class='slider__thumb-pic')
+
+script(type='text/x-template')#slider-btns
+    .slider__btns
+        .slider__arrows-btns
+            button(@click="$emit('slide', 'prev')").slider__arrow-btn.slider__arrow-btn--prev
+                +icon('arrow-down', 'arrow-icon-prev')
+            button(@click="$emit('slide', 'next')").slider__arrow-btn.slider__arrow-btn--next
+                +icon('arrow-down', 'arrow-icon-next')
+
+script(type='text/x-template')#slider-info
+    .slider__info
+        tags
+        h3.slider__info-title {{currentWork.title}}
+        .slider__info-desc
+            p {{currentWork.desc}}
+        a(:href='currentWork.link' target='_blank').slider__info-link
+            +icon('link', 'slider__info-icon')
+            .slider__info-link-text Посмотреть сайт
+
+script(type='text/x-template')#slider-tags
+    .slider__info-tags
+        ul.slider-tags
+            li.slider-tags__item(v-for='tag in tags')
+                .tag {{tag}}

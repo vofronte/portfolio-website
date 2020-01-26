@@ -10,9 +10,22 @@
     position: relative;
     margin-right: 157px;
     flex-shrink: 0;
+
+    &::before {
+        content: attr(data-slide);
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        color: $light-gray-color;
+        transform: translateY(-60%);
+        font-size: 400px;
+        font-weight: 800;
+        line-height: 0.78;
+    }
 }
 
-.slider__display-pic {
+.slider__full-pic,
+.slider__thumb-pic {
     width: 100%;
     object-fit: cover;
     object-position: top center;
@@ -20,6 +33,7 @@
 
 .slider__display-thumbs {
     position: absolute;
+    display: flex;
     right: 0;
     bottom: 60px;
     width: 534px;
@@ -33,13 +47,19 @@
     height: 100px;
 }
 
-.slider-thumbs__item {
+.slider__display-thumbs-item {
     position: relative;
     width: 33.33333%;
     height: 100%;
     flex-shrink: 0;
     cursor: pointer;
 }
+
+.slider__display-thumbs-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}  
 
 .slider__info {
     max-width: 340px;
@@ -51,7 +71,7 @@
     font-size: 30px;
     font-weight: 700;
     line-height: 1.6;
-    margin-bottom: 44px;
+    margin-top: 50px;
 }
 
 .slider__info-desc{
@@ -60,27 +80,32 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.88;
+    margin-top: 44px;
 }
 
-.iconend-link {
-    color: $links-color;
-    font-weight: 700;
-    font-size: 18px;
+.slider__info-link {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 
     &:hover {
-        text-decoration: underline;
+        .slider__info-link-text {
+            text-decoration: underline;
+        }
     }
 }
 
-.slider__info-text {
-    margin-bottom: 50px;
-}
-
-.link__icon {
+.slider__info-icon {
     width: 15px;
     height: 15px;
     fill: $links-color;
-    margin-right: 17px;
+}
+
+.slider__info-link-text {
+    color: $links-color;
+    font-weight: 700;
+    font-size: 18px;
+    margin-left: 17px;
 }
 
 .slider__btns {
@@ -88,20 +113,9 @@
     left: 100%;
     bottom: 60px;
     z-index: 1;
-    
-    &::after {
-        content: '1';
-        position: absolute;
-        bottom: 99%;
-        right: -254%;
-        color: $light-gray-color;
-        font-size: 400px;
-        font-weight: 800;
-        line-height: 0.78;
-    }
 }
 
-.arrow-btn {
+.slider__arrow-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,6 +123,4 @@
     height: 50px;
     background-color: #353e4e;
     border: none;
-    cursor: pointer;
-
 }

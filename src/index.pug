@@ -9,16 +9,16 @@ html(lang="ru")
     title Портфолио | Владимир Сергеев
   body
     .wrapper
-        .welcome-section
-          include templates/components/welcome-section/welcome-parallax
-          include templates/components/welcome-section/header
-          include templates/components/welcome-section/home
-          include templates/components/welcome-section/about
-        include templates/components/skills
-        include templates/components/works
-        .feedback-section
-          include templates/components/feedback-section/feedback-parallax
-          include templates/components/feedback-section/reviews
-          include templates/components/feedback-section/feedback
-        include templates/components/footer
-    include templates/components/popup-menu
+      .welcome-section
+        include templates/components/welcome-section/home-parallax
+        include templates/components/welcome-section/header
+        include templates/components/welcome-section/home
+        include templates/components/welcome-section/about
+      include templates/components/skills-section/skills-section
+      include templates/components/works-section/works-section
+      .feedback-section
+        include templates/components/feedback-section/feedback-parallax
+        include templates/components/feedback-section/reviews
+        include templates/components/feedback-section/feedback
+      include templates/components/footer
+    include templates/entry.pug
