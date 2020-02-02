@@ -1,7 +1,7 @@
 .socials
-    - var socials = ['insta', 'vk', 'github'];
+    - var socials = [{ name: 'insta', url: 'http://instgram.ru/sergeev.vn' }, { name: 'vk', url: 'https://vk.com/sergeev_vn' }, { name: 'github', url: 'https://github.com/sergeev-vn' }];
         ul.socials__list
             each item in socials
                 li.social__item
-                    a.social__link(href='#')
-                        +icon(item, 'social__icon')
+                    a.social__link(href=item.url target='_blank')
+                        +icon(item.name, 'social__icon')

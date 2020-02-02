@@ -5,6 +5,10 @@
 .social__item {
     margin-right: 40px;
 
+    @include tablets {
+        margin-right: 50px;
+    }
+
     &:last-child {
         margin-right: 0;
     }
@@ -16,6 +20,11 @@
     fill: $main-color;
     opacity: 0.3;
     transition: $speed;
+
+    @include tablets {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 .social__link {

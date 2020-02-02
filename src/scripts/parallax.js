@@ -34,6 +34,11 @@ function feedbackParallax(wScroll) {
 
 //event scroll
 $(window).scroll(function () {
+
+    if (window.innerWidth <= 768) {
+        return;
+      }
+
     var wScroll = window.pageYOffset;
 
     if (window.innerHeight > wScroll) {

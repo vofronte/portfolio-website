@@ -9,7 +9,7 @@
     background-image: url('~images/parallax/autumn.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center bottom;
+    background-position: left bottom;
     z-index: -1;
 
 
@@ -35,6 +35,18 @@
         right: -230px;
         width: 616px;
         height: 442px;
+
+        @include desktop {
+            right: -360px;
+        }
+
+
+        @include tablets {
+            width: 445px;
+            height: 330px;
+            top: 5%;
+            right: -300px;
+        }
     }
 
 
@@ -43,6 +55,18 @@
         right: 10%;
         width: 109px;
         height: 84px;
+
+        @include desktop {
+            bottom: 11%;
+            right: 4%;
+        }
+
+        @include tablets {
+            width: 81px;
+            height: 64px;
+            bottom: 43%;
+            right: -16px;
+        }
     }
 
 
@@ -51,6 +75,18 @@
         right: 24%;
         width: 132px;
         height: 140px;
+
+        @include desktop {
+            bottom: 30%;
+            right: 12%;
+        }
+
+        @include tablets {
+            width: 96px;
+            height: 103px;
+            bottom: 55%;
+            right: 13%;
+        }
     }
 
 
@@ -59,5 +95,16 @@
         right: 7%;
         width: 412px;
         height: 248px;
+
+        @include desktop {
+            right: 2%;
+        }
+
+        @include tablets {
+            width: 294px;
+            height: 183px;
+            top: 70%;
+            right: -16px;
+        }
     }
 }

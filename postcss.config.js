@@ -12,7 +12,7 @@ module.exports = {
     }),
     require("postcss-advanced-variables")({
       variables: JSON.parse(
-        fs.readFileSync("./src/data/variables.json", "utf-8")
+        fs.readFileSync("./src/variables.json", "utf-8")
       )
     }),
     require("postcss-nested"),

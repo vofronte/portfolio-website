@@ -1,5 +1,5 @@
 .header {
-    padding: 45px 0;
+    padding: 62px 0;
     width: 100%;
     position: absolute;
     top: 0;
@@ -17,4 +17,36 @@
     font-size: 36px;
     font-weight: 800;
     line-height: 0.83;
+}
+
+.header__socials {
+    @include tablets {
+        margin-right: 18%;
+    }
+
+    @include phones {
+        display: none;
+    }
+    
+}
+
+.header__sidebar {
+    display: none;
+    position: fixed;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 326px;
+    background-color: $main-color;
+    transform: translateX(0);
+    transition: transform $speed;
+
+
+    @include tablets {
+        display: block;
+    }
+
+    @include phones {
+        width: 100%;
+    }
 }

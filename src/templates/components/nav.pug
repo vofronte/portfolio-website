@@ -1,6 +1,6 @@
 nav.nav
-    - var nav = ['Главная', 'Обо мне', 'Навыки', 'Работы', 'Отзывы', 'Связаться'];
+    - var nav = [{ title: 'Главная', url: '#home' }, { title: 'Обо мне', url: '#about' }, { title: 'Навыки', url: '#skills-section' }, { title: 'Работы', url: '#works-section' }, { title: 'Отзывы', url: '#reviews' }, { title: 'Связаться', url: '#feedback' }]
         ul.nav__list
             each item in nav
                 li.nav__item
-                    a.nav__link(href='#') #{item}
+                    a.nav__link(href=item.url) #{item.title}

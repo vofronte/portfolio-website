@@ -6,7 +6,8 @@ const thumbs = {
 };
 
 const btns = {
-    template: '#slider-btns'
+    template: '#slider-btns',
+    props: ['currentIndex', 'worksLength']
 };
 
 const display = {
@@ -19,7 +20,7 @@ const display = {
 
 const tags = {
     template: '#slider-tags',
-    props: ['tags']
+    props: ['tagsArray']
 };
 
 const info = {
@@ -67,7 +68,6 @@ new Vue({
                     this.currentIndex--;
                     break;
             }
-            console.log(direction);
             
         },
         makeNoLoop(value) {

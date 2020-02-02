@@ -12,7 +12,7 @@ script(type='text/x-template')#slider-container
 
 script(type='text/x-template')#slider-display
     .slider__display(:data-slide='currentIndex + 1')
-        .slider__display-conten
+        .slider__display-content
             .slider__display-fullpic
                 img(:src="currentWork.photo", alt='', class='slider__full-pic')
             thumbs(
@@ -21,6 +21,8 @@ script(type='text/x-template')#slider-display
             )
             btns(
                 @slide='$emit("slide", $event)'
+                :currentIndex='currentIndex'
+                :worksLength='works.length'
             )
 
 script(type='text/x-template')#slider-thumbs
@@ -29,20 +31,30 @@ script(type='text/x-template')#slider-thumbs
                 v-for='work in works'
                 :class='{active: work.id === currentWork.id}'
                 )
-                a.slider__display-thumbs-link
+                a(@click="$emit('slide', index)").slider__display-thumbs-link
                     img(:src="work.photo", alt='', class='slider__thumb-pic')
 
 script(type='text/x-template')#slider-btns
     .slider__btns
         .slider__arrows-btns
-            button(@click="$emit('slide', 'prev')").slider__arrow-btn.slider__arrow-btn--prev
+            button(
+                type='button'
+                @click="$emit('slide', 'prev')"
+                :class='{disabled: currentIndex <= 0}'
+            ).slider__arrow-btn.slider__arrow-btn--prev
                 +icon('arrow-down', 'arrow-icon-prev')
-            button(@click="$emit('slide', 'next')").slider__arrow-btn.slider__arrow-btn--next
+            button(
+                type='button'
+                @click="$emit('slide', 'next')"
+                :class='{disabled: currentIndex === (worksLength - 1)}'
+                ).slider__arrow-btn.slider__arrow-btn--next
                 +icon('arrow-down', 'arrow-icon-next')
 
 script(type='text/x-template')#slider-info
     .slider__info
-        tags
+        tags(
+        :tagsArray="tagsArray"
+        )
         h3.slider__info-title {{currentWork.title}}
         .slider__info-desc
             p {{currentWork.desc}}
@@ -53,5 +65,5 @@ script(type='text/x-template')#slider-info
 script(type='text/x-template')#slider-tags
     .slider__info-tags
         ul.slider-tags
-            li.slider-tags__item(v-for='tag in tags')
+            li.slider-tags__item(v-for='tag in tagsArray')
                 .tag {{tag}}

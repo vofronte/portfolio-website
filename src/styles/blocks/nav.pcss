@@ -1,5 +1,8 @@
 .nav__list {
     display: flex;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    
 }
 
 .nav__item {
@@ -10,8 +13,12 @@
     }
 }
 
-.nav-wrapper {
-    margin: 0 90px;
+.header__wrapper-nav {
+    margin: 0 6.5%;
+    
+    @include tablets {
+        display: none;
+    }
 }
 
 .nav__link {

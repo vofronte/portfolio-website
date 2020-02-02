@@ -10,9 +10,19 @@
     color: $main-color;
 }
 
+.feedback__title {
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        font-size: 28px;
+        text-align: left;
+    }
+    
+}
+
 .btn {
-    width: 347px;
-    height: 80px;
     background: linear-gradient(to right, #d0731b 0%, #dc9322 100%);
     color: $main-color;
     font-size: 18px;
@@ -20,9 +30,19 @@
     text-transform: uppercase;
     outline: none;
     margin-top: 60px;
+    padding: 30px 115px;
 
     &:hover {
         background: linear-gradient(to right, #dc9322 0%, #d0731b 100%);
+    }
+
+    @include tablets {
+        padding: 35px 145px;
+        margin-top: 30px;
+    }
+
+    @include phones {
+        padding: 25px 90px;
     }
 }
 
@@ -44,7 +64,6 @@
 .arrow-icon-next {
     width: 8px;
     height: 10px;
-    fill: $main-color;
 }
 
 .arrow-icon-prev {

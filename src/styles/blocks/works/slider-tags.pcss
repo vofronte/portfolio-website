@@ -4,6 +4,11 @@
 
 .slider-tags {
     display: flex;
+    white-space: nowrap;
+
+    @include tablets {
+        justify-content: center;
+    }
 }
 
 .slider-tags__item {

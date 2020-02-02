@@ -2,25 +2,56 @@
     margin: 0 auto;
     padding: 200px 0;
     position: relative;
+
+    @include tablets {
+        padding-bottom: 145px;
+    }
 }
 
 
 .about__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+
+    @include phones {
+        flex-direction: column;
+    }
+    
 }
 
 .about__left {
-    width: 25%;
-    margin-right: 10%;
+    flex-basis: 25%;
+    
+    @include desktop {
+        margin-right: 11%;
+    }
+
+    
+    @include tablets {
+        margin-right: 14%;
+    }
+
+    @include phones {
+        margin-right: 0;
+    }
 }
 
 .about__right {
-    width: 36%;
+    max-width: 530px;
     color: $main-color;
     font-weight: 600;
     line-height: 1.88;
     font-size: 16px;
+
+    @include desktop {
+        width: 55%;
+    }
+
+    @include phones {
+        margin-top: 35px;
+        width: 100%;
+    }
+    
 }
 
 .about__welcome-text {
@@ -32,18 +63,29 @@
     font-weight: 700;
     line-height: 1.33;
     opacity: initial;
-    margin-top: 30px;
+    margin-top: 15px;
+
+    
+    @include phones {
+        line-height: 1.2;
+        font-size: 32px;
+    }
 }
 
 .about__desc {
-    margin-top: 38px;
+    margin-top: 30px;
     opacity: 0.5;
+
+    @include tablets {
+        margin-top: 45px;
+    }
+
 }
 
 .about__extra-desc {
     font-style: italic;
     font-weight: 400;
-    margin-top: 105px;
+    margin-top: 90px;
     opacity: 0.5;
     position: relative;
 
@@ -57,7 +99,21 @@
         font-style: italic;
         left: -47px;
         top: -18px;
+
+        @include phones {
+            left: -26px;
+            top: -20px;
+        }        
     }
+
+    @include tablets {
+        margin-top: 35px;
+    }
+
+    @include phones {
+        margin-top: 40px;
+    }
+
 }
 
 .about__person-info {
@@ -67,11 +123,36 @@
     align-items: center;
 }
 
+.about__person-info__text {
+    @include phones {
+        width: 100%;
+    }
+    
+}
 
 .about__person-info__avatar {
     width: 200px;
     height: 200px;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+
+    @include tablets {
+        margin-bottom: 50px;
+    }
+
+    @include phones {
+        margin-bottom: 22px;
+    }
+    
+}
+
+.about__person-info__data-table {
+    white-space: nowrap;
+
+    @include phones {
+        white-space: initial;
+        width: 100%;
+    }
+    
 }
 
 .about__person-info__data-row {
@@ -83,5 +164,9 @@
         font-size: 16px;
         line-height: 1.88;
         padding-right: 80px;
+
+        @include tablets {
+            padding-right: 15%;
+        }
     }
 }
