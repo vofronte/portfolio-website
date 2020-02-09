@@ -1,0 +1,46 @@
+.header {
+    background-color: $gradient-header;
+    background-image: $gradient-admin-header;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.header__main-content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.header__avatar {
+    width: 44px;
+    height: 45px;
+    margin-right: 2%;
+    flex-shrink: 0;
+}
+
+.header__user {
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 3%;
+}
+
+.header__page-name {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+.header__logout-link {
+    opacity: 0.7;
+    font-size: 16px;
+    text-decoration: underline;
+    transition: opacity $speed;
+
+    &:hover {
+        opacity: 1;
+    }
+}

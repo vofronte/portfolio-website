@@ -7,6 +7,11 @@
   "red-color": "#db0200",
   "dark-gray": "#1c1f22",
   "sidebar-color": "#2d3c4e",
+  "gradient-header": "#3e3e59",
+  "gradient-header2": "#454573",
+  "gradient-admin": "linear-gradient(to right, #ea5000 0%, #f29400 100%)",
+  "gradient-admin-reverse": "linear-gradient(to right, #f29400 0%, #ea5000 100%)",
+  "gradient-admin-header": "linear-gradient(90deg, #9e4f10,#b36e05)",
   
   "speed": "0.3s",
 

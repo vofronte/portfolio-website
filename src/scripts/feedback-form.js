@@ -96,3 +96,53 @@
 })(jQuery);
 $('textarea').autoResize();
 
+//validation of form
+const feedbackForm = document.querySelector('#feedback-form');
+const btnForm = document.querySelector('#btn-feedback');
+
+btnForm.addEventListener('click', e => {
+    e.preventDefault();
+
+    if (validateForm(feedbackForm)) {
+        console.log('oki');
+    }
+
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+
+    if (!validateField(form.elements.email)) {
+        valid = false;
+    }
+
+    if (!validateField(form.elements.feedback)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+
+    field.style.borderBottom = '1px solid #fb0000';
+
+    if (field.validationMessage) {
+        field.nextElementSibling.style.display = 'block';
+        field.nextElementSibling.nextElementSibling.style.fill = '#fb0000';
+        field.nextElementSibling.nextElementSibling.style.opacity = '1';
+    } else {
+        field.style.borderBottom = '';
+        field.nextElementSibling.style.display = '';
+        field.nextElementSibling.nextElementSibling.style.fill = '';
+        field.nextElementSibling.nextElementSibling.style.opacity = '';
+    }
+    
+    return field.checkValidity();
+
+}

@@ -1,28 +1,28 @@
-form.feedback-form
+form.feedback-form#feedback-form
     .feedback-form__row
         .feedback-form__col
             label.input
                 .input__text Введите ваше имя
                 .input__data
-                    input.input__elem(type="text" placeholder="Ковальчук Дмитрий")
+                    input.input__elem(type="text" placeholder="Ковальчук Дмитрий" name="name" required)
+                    .input__error
                     .input__icon
                         +icon('user', 'feedback-form__icon')
-                    .input__error
         .feedback-form__col
             label.input
-                .input__text Введите ваш email
+                .input__text Введите ваш  email
                 .input__data
-                    input.input__elem(type="email" placeholder="loftschool@study.com")
+                    input.input__elem(type="email" placeholder="loftschool@study.com" name="email" required)
+                    .input__error
                     .input__icon
                         +icon('envelope', 'feedback-form__icon')
-                    .input__error
     .feedback-form__row
         label.textarea
             .textarea__text Сообщение к письму
             .textarea__data
-                textarea.textarea__elem(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса")
+                textarea.textarea__elem(placeholder="Требуется ваша помощь в создании сайта. Интересуют сроки и цена вопроса" name="feedback" required)
+                .textarea__error
                 .textarea__icon
                     +icon('message', 'feedback-form__icon')
-                .textarea__error
     .feedback-form__btn
-        button.btn(type="submit") Отправить
+        button.btn(type="submit")#btn-feedback Отправить
