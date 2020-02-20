@@ -19,14 +19,6 @@
             color: $orange-color;
         }
     }
-
-    &:hover {
-        border-bottom: 3px solid $orange-color;
-
-        .nav-tabs__link {
-            color: $orange-color;
-        } 
-    }
 }
 
 
@@ -37,4 +29,17 @@
     width: 100%;
     height: 100%;
     padding: 25px 20px;
+    background-color: transparent;
+
+    &:before {
+        content: attr(data-text);
+    }
+
+    &:hover {
+        border-bottom: 3px solid $orange-color;
+
+        .nav-tabs__link {
+            color: $orange-color;
+        } 
+    }
 }
