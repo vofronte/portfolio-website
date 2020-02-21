@@ -123,7 +123,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 .add-review__form-addphoto {
   text-align: center;
   color: #ff9a00;
@@ -150,6 +150,7 @@ export default {
     width: 85px;
     display: block;
     position: absolute;
+    background: svg-load("filled-user.svg", fill=#fff) center center no-repeat;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -164,5 +165,21 @@ export default {
       display: none;
     }
   }
+  
 }
+
+.add-review__form-file-input {
+  position: absolute;
+  top: 0;
+  left: -9999px;
+}
+
+.add-review__form-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 27px;
+}
+
 </style>
