@@ -9,9 +9,7 @@ export default {
     SET_REVIEWS: (state, data) => (state.reviews = data),
     ADD_REVIEW: (state, review) => state.reviews.push(review),
     REMOVE_REVIEW: (state, removedReviewId) => {
-      state.reviews = state.reviews.filter(review => {
-        review.id !== removedReviewId;
-      });
+      state.reviews = state.reviews.filter((review) => review.id !== removedReviewId);
     }
   },
   actions: {

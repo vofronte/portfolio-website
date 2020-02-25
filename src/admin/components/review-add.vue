@@ -91,6 +91,10 @@ export default {
     async send() {
       try {
         await this.addReview(this.review);
+        this.renderedPhoto = '';
+        this.review.author = '';
+        this.review.occ = '';
+        this.review.text = '';
         this.showTooltip({
           type: "success",
           text: "Отзыв  добавлен"
@@ -112,6 +116,11 @@ export default {
   text-align: center;
   color: #ff9a00;
   font-weight: 600;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
 
 .add-review__form-userpic {
@@ -164,6 +173,11 @@ export default {
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 27px;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 }
 
 </style>
