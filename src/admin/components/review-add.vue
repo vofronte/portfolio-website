@@ -65,6 +65,7 @@ export default {
   },
   methods: {
     ...mapActions('review', ['addReview']),
+    ...mapActions("tooltips", ["showTooltip"]),
     // кодирование изображения в base64, его рендер
     handleFile(e) {
       // забираем файл
@@ -87,8 +88,20 @@ export default {
         throw new Errow("Ошибка при чтении файла");
       }
     },
-    send() {
-      this.addReview(this.review)
+    async send() {
+      try {
+        await this.addReview(this.review);
+        this.showTooltip({
+          type: "success",
+          text: "Отзыв  добавлен"
+        });
+      } catch (error) {
+        this.showTooltip({
+          type: "error",
+          text: error.message
+        });
+      }
+      
     }
   }
 }
