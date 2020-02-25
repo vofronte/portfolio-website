@@ -45,7 +45,12 @@ new Vue({
     components: {
         skillsRow
     },
-    async  created() {
+    computed: {
+        reversedSkills() {
+            return this.skills.reverse();
+        }
+    },
+    async created() {
         //забираем из json
         //const data = require('../data/skills.json');
         const {data} = await $axios.get('/categories/272');

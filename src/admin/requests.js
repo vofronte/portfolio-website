@@ -10,6 +10,8 @@ const requests = axios.create({
         'Authorization': `Bearer ${token}`
     }
 });
+// базовый URL
+axios.defaults.baseURL = 'https://webdev-api.loftschool.com/';
 
 requests.interceptors.response.use(
     response => response,
