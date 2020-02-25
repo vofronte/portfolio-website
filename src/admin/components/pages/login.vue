@@ -77,7 +77,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style scoped lang='postcss'>
 .login-page {
   min-height: 100vh;
   width: 100%;
