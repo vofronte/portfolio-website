@@ -28,4 +28,14 @@
     height: 30px;
     fill: $main-color;
     transition: fill $speed;
+    animation: float 0.7s ease-in-out infinite alternate;
 }
+
+@keyframes float {
+    from {
+        transform: translateY(-12%);
+    }
+    to {
+        ransform: translateY(12%);
+    }
+  }
