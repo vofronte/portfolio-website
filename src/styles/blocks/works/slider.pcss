@@ -75,13 +75,11 @@
 }
 
 .slider__display-thumbs {
-    position: absolute;
     display: flex;
     right: 0;
     bottom: 60px;
     max-width: 710px;
     height: 100px;
-    overflow: hidden;
 
     @include tablets {
         bottom: 20px;
@@ -271,4 +269,14 @@ button.slider__arrow-btn {
         cursor: initial;
         fill-opacity: 0.2;
     }
+}
+
+.slider__display-thumbs-wrapper {
+    position: absolute;
+    right: 0;
+    bottom: 60px;
+    width: 100%;
+    max-width: 710px;
+    height: 100px;
+    overflow: hidden;
 }

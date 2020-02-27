@@ -70,6 +70,9 @@ new Vue({
             }
             
         },
+        handleClickThumbs(currentIDthumbs) {
+            this.currentIndex = currentIDthumbs-1;  
+        },
         makeNoLoop(value) {
             const workAmountComputerCounted = this.works.length -1;
 
