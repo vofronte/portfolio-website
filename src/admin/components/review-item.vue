@@ -13,7 +13,10 @@
         .review__text
           | {{review.text}}
         .review__btns
-          button.btn__edit
+          button(
+            type='button'
+            @click="$emit('edit')"
+          ).btn__edit
             .btn__edit-text Править
             svg.block__btn-pencil-icon
               use(xlink:href="sprite.svg#pencil")
@@ -44,3 +47,9 @@ export default {
   }
 }
 </script>
+
+<style lang="postcss" scoped>
+.review-block__reviews {
+  height: 100%;
+}
+</style>>

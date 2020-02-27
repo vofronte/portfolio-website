@@ -13,6 +13,7 @@ section.review-block
         li.review-block__item(v-for='review in reviews' :key='review.id')
           review-item(
             :review='review'
+            @edit='editExistingReview(review)'
             @delete="removeExistingReview(review.id)"
           )
 </template>
@@ -39,7 +40,7 @@ export default {
     })
   },
   methods: {
-    ...mapActions("review", ["fetchReviews", "removeReview"]),
+    ...mapActions("review", ["fetchReviews", "removeReview", 'editReview']),
     ...mapGetters("review", ["getReviews"]),
     ...mapActions("tooltips", ["showTooltip"]),
     async removeExistingReview(reviewId) {
@@ -55,6 +56,9 @@ export default {
           text: error.message
         });
       }
+    },
+    async editExistingReview(review) {
+      this.currentReview = review;
     },
     async fetchReviewsData() {
       this.isLoading = true;

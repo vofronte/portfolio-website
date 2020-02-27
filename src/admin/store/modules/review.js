@@ -1,4 +1,5 @@
 import { generateStdError } from "../../helpers/errorHandler";
+import { wrapIntoFormData } from '../../helpers/forms';
 
 export default {
   namespaced: true,
@@ -10,6 +11,11 @@ export default {
     ADD_REVIEW: (state, review) => state.reviews.push(review),
     REMOVE_REVIEW: (state, removedReviewId) => {
       state.reviews = state.reviews.filter((review) => review.id !== removedReviewId);
+    },
+    EDIT_REVIEW: (state, editedReview) => {
+      state.reviews = state.reviews.map(
+        review => review.id !== editedReview.id ? review : editedReview
+      );
     }
   },
   actions: {
@@ -51,10 +57,14 @@ export default {
       }
     }
   },
-  getters: {
-    // получить список всех отзывов
-    getReviews: state => {
-        return state.reviews;
+  async editReview({commit}, editedReview) {
+    const data = wrapIntoFormData(editedReview);
+    try {
+      const response = await this.$axios.post(`/reviews/${editedReview.id}`, data);
+      commit('EDIT_REVIEW', response.data.review);
+      return response;
+    } catch (error) {
+      generateStdError(error);
     }
   }
 }
