@@ -13,6 +13,7 @@
 </p>
 
 [**Демо**](https://sergeev-vn.github.io/chocco/)
+
 [**Демо Admin-панель**](https://sergeev-vn.github.io/chocco/admin)
 
 ## Чтобы развернуть проект необходимо:
