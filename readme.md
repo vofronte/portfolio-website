@@ -12,9 +12,9 @@
 <img src='http://lessons.sergeev.press/git%20portf%20(1).png'>
 </p>
 
-[**Демо**](https://sergeev-vn.github.io/chocco/)
+[**Демо**](https://sergeev-vn.github.io/portfolio-website/)
 
-[**Демо Admin-панель**](https://sergeev-vn.github.io/chocco/admin)
+[**Демо Admin-панель**](https://sergeev-vn.github.io/portfolio-website/admin)
 
 ## Чтобы развернуть проект необходимо:
 > Перед установкой зависимостей и запуском проекта убедитесь, что у вас установлена [последняя версия Node.js & NPM](https://nodejs.org/en/download/current/), а так же
