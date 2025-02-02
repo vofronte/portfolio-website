@@ -71,7 +71,7 @@ export default {
             }
         },
         returnToHomePage() {
-            location.href = 'https://sergeev-vn.github.io/portfolio-website/'
+            location.href = '/'
         }
     }
 };

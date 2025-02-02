@@ -1,7 +1,7 @@
 script(type='text/x-template')#skills-list
     .skills__wrapper
         ul.skills
-            li.skills__item(v-for='skill in reversedSkills')
+            li.skills__item(v-for='skill in skills')
                 skills-row(
                     :skill='skill'
                 )

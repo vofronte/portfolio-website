@@ -1,20 +1,73 @@
 [
     {
-        "skillsGroup": "Frontend",
-        "skills": {
-            "HTML5": 80,
-            "CSS3": 70,
-            "JavaScript ": 40,
-            "Jquery и Vue.js ": 15
+      "category": "Frontend",
+      "skills": {
+        "Vue.js": {
+          "title": "Vue.js",
+          "percent": "85"
+        },
+        "Nuxt.js": {
+          "title": "Nuxt.js",
+          "percent": "80"
+        },
+        "JavaScript": {
+          "title": "JavaScript",
+          "percent": "85"
+        },
+        "TypeScript": {
+          "title": "TypeScript",
+          "percent": "75"
+        },
+        "HTML": {
+          "title": "HTML",
+          "percent": "95"
+        },
+        "CSS": {
+          "title": "CSS",
+          "percent": "95"
+        },
+        "TailwindCSS": {
+          "title": "TailwindCSS",
+          "percent": "70"
         }
+      }
     },
     {
-        "skillsGroup": "Workflow",
-        "skills": {
-            "GIT": 45,
-            "Terminal": 50,
-            "Gulp": 40,
-            "Webpack": 30
+      "category": "Workflow",
+      "skills": {
+        "Git": {
+          "title": "Git",
+          "percent": "80"
+        },
+        "Vite": {
+          "title": "Vite",
+          "percent": "70"
+        },
+        "Webpack": {
+          "title": "Webpack",
+          "percent": "75"
+        },
+        "Docker": {
+          "title": "Docker",
+          "percent": "60"
+        },
+        "Kanban": {
+          "title": "Kanban",
+          "percent": "75"
+        },
+        "Jira": {
+          "title": "Jira",
+          "percent": "70"
         }
+      }
+    },
+    {
+      "category": "CMS",
+      "skills": {
+        "1С-Битрикс": {
+          "title": "1С-Битрикс",
+          "percent": "60"
+        }
+      }
     }
-]
+  ]

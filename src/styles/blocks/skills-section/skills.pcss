@@ -19,7 +19,8 @@
 
 .skills-row__list {
     display: flex;
-    margin-top: 20px;
+    flex-wrap: wrap;
+    gap: 24px 2vw;
 
     @include phones {
         flex-wrap: wrap;
@@ -30,7 +31,7 @@
 
 .skills-row__item {
     list-style: none;
-    margin-right: 3.5vw;
+    // margin-right: 3.5vw;
 
     &:last-child {
         margin-right: 0;      
@@ -105,7 +106,7 @@
 }
 
 .skills {
-    margin-left: 22vw;
+    // margin-left: 22vw;
 
     @include desktop {
         margin-left: 0;

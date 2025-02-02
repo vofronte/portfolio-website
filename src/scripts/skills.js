@@ -52,8 +52,9 @@ new Vue({
     },
     async created() {
         //забираем из json
-        //const data = require('../data/skills.json');
-        const {data} = await $axios.get('/categories/272');
+        const data = require('../data/skills.json');
+        console.log("🚀 ~ data:", data)
+        // const {data} = await $axios.get('/categories/272');
 
         this.skills = data;
     }
