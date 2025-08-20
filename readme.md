@@ -1,87 +1,87 @@
-# Проект «Portfolio»
-💼 **Адаптивное одностраничное SPA-приложение** с авторизацией и админ-панелью для заполнения данными.
+# "Portfolio" Project
+💼 **Responsive single-page SPA application** with authentication and an admin panel for managing data.
 
-Основной стек технологий:
-- **Vue.js v2** — фронтенд фреймворк
-- **Pug** — шаблонизатор
-- **PostCSS** — для обработки CSS
-- **Webpack 4** — сборщик модулей
-- **JavaScript** — язык программирования
+### Main tech stack:
+- **Vue.js v2** (frontend framework)
+- **Pug** (templating engine)
+- **PostCSS** (for processing CSS)
+- **Webpack 4** (module bundler)
+- **JavaScript** (programming language)
 
 <p align='center'>
   <img width="1838" height="900" alt="image" src="https://github.com/user-attachments/assets/81dee03e-9b68-4396-a3f1-6f2665dd4dbe" />
 </p>
 
-### Демо
+### Demo
 
-- [Основное приложение](https://www.bettercallsergeev.pro/)
-- [Админ-панель](https://www.bettercallsergeev.pro/admin)
+- [Main Application](https://www.bettercallsergeev.pro/)
+- [Admin Panel](https://www.bettercallsergeev.pro/admin)
 
-## Установка и запуск проекта
+## Installation and Setup
 
-### 1. Убедитесь, что у вас установлены следующие инструменты:
-- [Node.js & NPM](https://nodejs.org/en/download/current) (последняя версия)
-- [Yarn](https://yarnpkg.com/ru/docs/install) (последняя версия)
+### 1. Make sure you have the following tools installed:
+- [Node.js & NPM](https://nodejs.org/en/download/current) (latest version)
+- [Yarn](https://yarnpkg.com/ru/docs/install) (latest version)
 
-### 2. Клонируйте репозиторий и установите зависимости:
+### 2. Clone the repository and install dependencies:
 ```sh
 $ git clone git@github.com:vofronte/portfolio-website.git
 $ cd portfolio-website
 $ yarn
 ````
 
-### 3. Запуск проекта
+### 3. Run the project
 
-Запустите проект в режиме разработки:
+Start the project in development mode:
 
 ```sh
 $ yarn dev
 ```
 
-Для сборки проекта в production:
+To build the project for production:
 
 ```sh
 $ yarn build
 ```
 
-### 4. Использование админ-панели
+### 4. Using the Admin Panel
 
-Перед началом работы с админ-панелью, зарегистрируйте пользователя с помощью утилиты:
+Before working with the admin panel, register a user using the utility:
 
 ```sh
 $ yarn reg
 ```
 
-## Скрипты из `package.json`
+## Scripts from `package.json`
 
-| Скрипт  | Описание                                                                                     |
-| ------- | -------------------------------------------------------------------------------------------- |
-| `dev`   | Запуск webpack-dev-server с горячей заменой модулей.                                         |
-| `build` | Сборка проекта для **production** (готово к загрузке на сервер).                             |
-| `reg`   | Утилита для регистрации пользователей. Используйте перед началом работы с **админ-панелью**. |
+| Script  | Description                                                                |
+| ------- | -------------------------------------------------------------------------- |
+| `dev`   | Starts webpack-dev-server with hot module replacement.                     |
+| `build` | Builds the project for **production** (ready for deployment on a server).  |
+| `reg`   | User registration utility. Use it before working with the **admin panel**. |
 
-Для запуска любого скрипта используйте команду:
-
-```sh
-$ npm run имя_скрипта
-```
-
-или
+To run any script, use the following command:
 
 ```sh
-$ yarn имя_скрипта
+$ npm run script_name
 ```
 
-## Стек технологий
+or
 
-### Фронтенд:
+```sh
+$ yarn script_name
+```
 
-* **Vue.js**: Основной фреймворк для создания интерфейса.
-* **Vuex**: Управление состоянием приложения.
-* **Vue-router**: Маршрутизация.
+## Tech Stack
 
-### Прочее:
+### Frontend:
 
-* **Webpack**: Сборка и оптимизация проекта.
-* **PostCSS**: Современные средства для обработки CSS.
-* **Pug**: Шаблонизатор для упрощения HTML-разметки.
+* **Vue.js**: Main framework for building the interface.
+* **Vuex**: State management for the app.
+* **Vue-router**: Routing.
+
+### Other:
+
+* **Webpack**: Project bundling and optimization.
+* **PostCSS**: Modern tools for processing CSS.
+* **Pug**: Templating engine for simplifying HTML markup.
